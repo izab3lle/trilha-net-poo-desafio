@@ -1,7 +1,5 @@
 ﻿using DesafioPOO.Models;
 
-// TODO: Realizar os testes com as classes Nokia e Iphone
-
 Console.WriteLine("Teste de entrada Iphone: ");
 Iphone ip = new Iphone(numero: "99999-9999", modelo: "c3po",
                        imei: "666666", memoria: 4 );
