@@ -30,7 +30,7 @@ namespace DesafioPOO.Models
             set
             {
                 if(value != "")
-                    modelo = value;
+                    imei = value;
                 else
                     throw new ArgumentException("O IMEI não pode ser nulo");
             }
@@ -41,7 +41,7 @@ namespace DesafioPOO.Models
             get => memoria;
             set
             {
-                if(value <= 0)
+                if(value >= 0)
                     memoria = value;
                 else
                     throw new ArgumentException("A memória não pode ser zero ou negativa");
@@ -68,5 +68,10 @@ namespace DesafioPOO.Models
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
+
+        public override string ToString()
+        {
+            return $"Número: {Numero}\nModelo: {Modelo}\nIMEI: {IMEI}\nMemória: {Memoria}";
+        }
     }
 }
